@@ -8,8 +8,8 @@ const ccLogo = document.querySelector(".cc-logo span:nth-child(2) img")
 function setCardType(type) {
 
     const colors = {
-        visa: ["#436D99", "#2D57F2"],
-        mastercard: ["#DF6F29", "#C69347"],
+        visa: ["#744399", "#862df2"],
+        mastercard: ["#DF6F29", "#c64747"],
         default: ["black", "green"]
     }
 
@@ -85,12 +85,12 @@ const cardHolder = document.querySelector("#card-holder")
 cardHolder.addEventListener("input", () => {
     const ccHolder = document.querySelector(".cc-holder .value")
 
-    ccHolder.innerText = cardHolder.value.length === 0 ? "FULANO DA SILVA" : cardHolder.value
+    ccHolder.innerText = cardHolder.value.length === 0 ? "JUNIOR DEV" : cardHolder.value
 })
 
 function updateSecurityCode(code) {
     const ccSecurity = document.querySelector(".cc-security .value")
-    ccSecurity.innerText = code.length === 0 ? "123" : code
+    ccSecurity.innerText = code.length === 0 ? "750" : code
 }
 securityCodeMasked.on("accept", () => {
     updateSecurityCode(securityCodeMasked.value);
@@ -98,7 +98,7 @@ securityCodeMasked.on("accept", () => {
 
 function updateCardNumber(number) {
     const ccNumber = document.querySelector(".cc-number")
-    ccNumber.innerText = number.length === 0 ? "1234 5678 9012 3456" : number
+    ccNumber.innerText = number.length === 0 ? "2154 6200 1700 8150" : number
 }
 cardNumberMasked.on("accept", () => {
     const cardType = cardNumberMasked.masked.currentMask.cardtype
