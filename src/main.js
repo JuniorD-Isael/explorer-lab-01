@@ -9,12 +9,12 @@ function setCardType(type) {
 
     const colors = {
         visa: ["#744399", "#862df2"],
-        mastercard: ["#DF6F29", "#c64747"],
-        default: ["black", "green"]
+        mastercard: ["#ff009d", "#47c6b5"],
+        default: ["purple", "red"]
     }
 
     ccBgColor01.setAttribute("fill", colors[type] [0]);
-    ccBgColor01.setAttribute("fill", colors[type] [1]);
+    ccBgColor02.setAttribute("fill", colors[type] [1]);
     ccLogo.setAttribute("src", `cc-${type}.svg`);
 }
 
